@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a325f8e0-1f5d-45b3-ad83-8331c0269c2b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$BlockContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$DoubleStmtContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$ElseifContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$FloatContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/production/langage/ast/Operation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ast/Operation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/production/langage/ast/bexprs/False.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/production/langage/ast/bexprs/True.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ast/bexprs/False.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ast/bexprs/True.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/AstBuilder.class" afterPath="$PROJECT_DIR$/bin/production/langage/AstBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageBaseListener.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageBaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageBaseVisitor.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageBaseVisitor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageCompiler.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageCompiler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageLexer.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageLexer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageListener.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$AffectBoolContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$AffectBoolContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$AffectExprContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$AffectExprContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$AndContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$AndContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$BexpContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$BexpContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$BlockConditionContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$BlockConditionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$BooleanContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$BooleanContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$CharContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$CharContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$CompareContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$CompareContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$CondContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$CondContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$DecrementVarContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$DecrementVarContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$ElseCondContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$ElseCondContext.class" />
@@ -23,28 +23,26 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$IncrementVarContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$IncrementVarContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$LangContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$LangContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$LoopContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$LoopContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$NotContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$NotContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$OperationContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$OperationContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$OrContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$OrContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$ProgContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$ProgContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$SkipContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$SkipContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$StmtContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$StmtContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$VarContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$VarContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser$WhileContext.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser$WhileContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageParser.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageVisitor.class" afterPath="$PROJECT_DIR$/bin/production/langage/LangageVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/ast/bodies/Cond.class" afterPath="$PROJECT_DIR$/bin/production/langage/ast/bodies/Cond.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/ast/bexprs/And.class" afterPath="$PROJECT_DIR$/bin/production/langage/ast/bexprs/And.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/ast/bexprs/Not.class" afterPath="$PROJECT_DIR$/bin/production/langage/ast/bexprs/Not.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/ast/bexprs/Or.class" afterPath="$PROJECT_DIR$/bin/production/langage/ast/bexprs/Or.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/Langage.g4" afterPath="$PROJECT_DIR$/bin/production/langage/Langage.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/Langage.tokens" afterPath="$PROJECT_DIR$/bin/production/langage/Langage.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/LangageLexer.tokens" afterPath="$PROJECT_DIR$/bin/production/langage/LangageLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/Langage.tokens" afterPath="$PROJECT_DIR$/gen/Langage.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangageBaseListener.java" afterPath="$PROJECT_DIR$/gen/LangageBaseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangageBaseVisitor.java" afterPath="$PROJECT_DIR$/gen/LangageBaseVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangageLexer.java" afterPath="$PROJECT_DIR$/gen/LangageLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangageLexer.tokens" afterPath="$PROJECT_DIR$/gen/LangageLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangageListener.java" afterPath="$PROJECT_DIR$/gen/LangageListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/production/langage/other.txt" afterPath="$PROJECT_DIR$/bin/production/langage/other.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangageParser.java" afterPath="$PROJECT_DIR$/gen/LangageParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/LangageVisitor.java" afterPath="$PROJECT_DIR$/gen/LangageVisitor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AstBuilder.java" afterPath="$PROJECT_DIR$/src/AstBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Langage.g4" afterPath="$PROJECT_DIR$/src/Langage.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/bodies/Cond.java" afterPath="$PROJECT_DIR$/src/ast/bodies/Cond.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/bexprs/And.java" afterPath="$PROJECT_DIR$/src/ast/bexprs/And.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/bexprs/Not.java" afterPath="$PROJECT_DIR$/src/ast/bexprs/Not.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ast/bexprs/Or.java" afterPath="$PROJECT_DIR$/src/ast/bexprs/Or.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/other.txt" afterPath="$PROJECT_DIR$/src/other.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.dot" afterPath="$PROJECT_DIR$/test.dot" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.txt" afterPath="$PROJECT_DIR$/test.txt" />
     </list>
@@ -73,67 +71,39 @@
       <file leaf-file-name="Langage.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Langage.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state relative-caret-position="71">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Number.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ast/types/Number.java">
+      <file leaf-file-name="Compare.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Compare.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Or.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Or.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-              <folding>
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Var.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ast/types/Var.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+              <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Prog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ast/Prog.java">
+      <file leaf-file-name="other.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/other.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lang.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ast/Lang.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Op.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ast/coordinator/Op.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-              <folding>
-                <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -141,18 +111,53 @@
       <file leaf-file-name="AstBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AstBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+            <state relative-caret-position="1160">
+              <caret line="160" column="67" selection-start-line="160" selection-start-column="67" selection-end-line="160" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2933#2934#0" expanded="true" />
-                <element signature="e#2993#2994#0" expanded="true" />
+                <element signature="e#2926#2927#0" expanded="true" />
+                <element signature="e#2986#2987#0" expanded="true" />
+                <element signature="e#4674#4675#0" expanded="true" />
+                <element signature="e#4746#4747#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LangageCompiler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Char.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ast/types/Char.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+              <folding>
+                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="And.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ast/bexprs/And.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Block.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Block.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LangageCompiler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LangageCompiler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
@@ -162,23 +167,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Affect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ast/exprs/Affect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="0">
+              <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -189,8 +182,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -205,8 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/syntaxTree/Prog.java" />
-        <option value="$PROJECT_DIR$/src/ast/Expr.java" />
         <option value="$PROJECT_DIR$/src/ast/Inst.java" />
         <option value="$PROJECT_DIR$/src/ast/Cond.java" />
         <option value="$PROJECT_DIR$/src/ast/Int.java" />
@@ -223,10 +214,7 @@
         <option value="$PROJECT_DIR$/src/ast/CondElseIf.java" />
         <option value="$PROJECT_DIR$/src/ast/CondThen.java" />
         <option value="$PROJECT_DIR$/src/ast/bexprs/and.java" />
-        <option value="$PROJECT_DIR$/src/ast/bexprs/And.java" />
         <option value="$PROJECT_DIR$/src/ast/bexprs/False.java" />
-        <option value="$PROJECT_DIR$/src/ast/bexprs/Not.java" />
-        <option value="$PROJECT_DIR$/src/ast/bexprs/Or.java" />
         <option value="$PROJECT_DIR$/src/ast/bodies/Conds/CondThen.java" />
         <option value="$PROJECT_DIR$/src/ast/Op.java" />
         <option value="$PROJECT_DIR$/src/ast/bexprs/Compare.java" />
@@ -236,7 +224,6 @@
         <option value="$PROJECT_DIR$/src/ast/bodies/Conds/CondElse.java" />
         <option value="$PROJECT_DIR$/src/ast/bodies/stmts/Increment.java" />
         <option value="$PROJECT_DIR$/src/ast/types/Var.java" />
-        <option value="$PROJECT_DIR$/src/other.txt" />
         <option value="$PROJECT_DIR$/src/ast/types/Number.java" />
         <option value="$PROJECT_DIR$/src/ast/bodies/Loop.java" />
         <option value="$PROJECT_DIR$/src/ast/bodies/loops/While.java" />
@@ -252,10 +239,16 @@
         <option value="$PROJECT_DIR$/src/ast/bodies/stmts/Decrement.java" />
         <option value="$PROJECT_DIR$/src/ast/coordinator/Operator.java" />
         <option value="$PROJECT_DIR$/src/ast/coordinator/Op.java" />
-        <option value="$PROJECT_DIR$/test.txt" />
-        <option value="$PROJECT_DIR$/src/AstBuilder.java" />
-        <option value="$PROJECT_DIR$/src/Langage.g4" />
+        <option value="$PROJECT_DIR$/src/ast/bexprs/Not.java" />
+        <option value="$PROJECT_DIR$/src/other.txt" />
+        <option value="$PROJECT_DIR$/src/ast/bexprs/Block.java" />
+        <option value="$PROJECT_DIR$/src/ast/bexprs/And.java" />
+        <option value="$PROJECT_DIR$/src/ast/bexprs/Or.java" />
         <option value="$PROJECT_DIR$/src/LangageCompiler.java" />
+        <option value="$PROJECT_DIR$/src/ast/types/Char.java" />
+        <option value="$PROJECT_DIR$/src/AstBuilder.java" />
+        <option value="$PROJECT_DIR$/test.txt" />
+        <option value="$PROJECT_DIR$/src/Langage.g4" />
       </list>
     </option>
   </component>
@@ -432,85 +425,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bodies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="langage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="langage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bodies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stmts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="langage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="langage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bodies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loops" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="langage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="langage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ast" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bodies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Conds" />
+              <option name="myItemId" value="bexprs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1046,12 +961,12 @@
       <workItem from="1490184568434" duration="9035000" />
       <workItem from="1490270070476" duration="6362000" />
       <workItem from="1490276469539" duration="3560000" />
-      <workItem from="1490358499585" duration="11711000" />
+      <workItem from="1490358499585" duration="15340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49285000" />
+    <option name="totallyTimeSpent" value="52914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1282" height="1000" extended-state="6" />
@@ -1109,23 +1024,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/syntaxTree/Comp.java" />
-    <entry file="file://$PROJECT_DIR$/src/syntaxTree/Expr.java" />
     <entry file="file://$PROJECT_DIR$/src/syntaxTree/Stmt.java" />
     <entry file="file://$PROJECT_DIR$/src/syntaxTree/Cond.java" />
     <entry file="file://$PROJECT_DIR$/src/syntaxTree/Loop.java" />
     <entry file="file://$PROJECT_DIR$/src/syntaxTree/Prog.java" />
-    <entry file="file://$PROJECT_DIR$/src/ast/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding>
-            <element signature="e#133#134#0" expanded="false" />
-            <element signature="e#159#160#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ast/SyntaxTree.java" />
     <entry file="file://$PROJECT_DIR$/src/ast/Inst.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1165,37 +1067,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/bexprs/And.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ast/bexprs/False.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="e#154#155#0" expanded="false" />
-            <element signature="e#180#181#0" expanded="false" />
-            <element signature="e#223#224#0" expanded="false" />
-            <element signature="e#250#251#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Not.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Or.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1270,16 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Compare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ast/bodies/Conds/CondElseIf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1310,22 +1176,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/other.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/LangageParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="338" column="0" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
           <folding>
-            <element signature="e#0#45801#0" expanded="false" />
+            <element signature="e#0#45778#0" expanded="false" />
             <element signature="imports" expanded="false" />
-            <marker date="1490369781000" expanded="false" signature="403:472" ph="/all, warnings, unchecked, unused, cast/" />
+            <marker date="1490373994000" expanded="false" signature="403:472" ph="/all, warnings, unchecked, unused, cast/" />
           </folding>
         </state>
       </provider>
@@ -1490,26 +1348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AstBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2933#2934#0" expanded="true" />
-            <element signature="e#2993#2994#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Langage.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ast/types/Number.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -1518,14 +1356,6 @@
             <element signature="e#286#287#0" expanded="true" />
             <element signature="e#351#352#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1539,10 +1369,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Not.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Or.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/other.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LangageCompiler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/types/Char.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/bexprs/Compare.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/bexprs/And.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AstBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1160">
+          <caret line="160" column="67" selection-start-line="160" selection-start-column="67" selection-end-line="160" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2926#2927#0" expanded="true" />
+            <element signature="e#2986#2987#0" expanded="true" />
+            <element signature="e#4674#4675#0" expanded="true" />
+            <element signature="e#4746#4747#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Langage.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
           <folding />
         </state>
       </provider>

@@ -1,14 +1,33 @@
 if(x == 2) then
-    skip
-else if(x <= 3) then
-    skip
-else if(x > 3) then
-    while(x < 10) do
-        x ++
+    if(z == 5) then
+        z = x + y
+        z = x - y
+        z = x * y
+        z = x / y
+        z--
     end
-else if(x >= 3) then
-    skip
-else if(x != 9) then
-    skip
+    if(true) then
+        skip
+    end
+    if(false) then
+        skip
+    end
+else
+    if(x <= 3) then
+        for(y = 5.2; y < 8.2; y++) do
+            skip
+        end
+    else
+        if(x > 3) then
+            while(x < 10) do
+                x ++
+            end
+        end
+        if(x >= 3) then
+            skip
+        else
+            skip
+        end
+        skip
+    end
 end
-skip

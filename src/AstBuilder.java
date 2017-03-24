@@ -1,6 +1,5 @@
 import ast.*;
-import ast.bexprs.Compare;
-import ast.bexprs.Bool;
+import ast.bexprs.*;
 import ast.bodies.Cond;
 import ast.bodies.Conds.CondElse;
 import ast.bodies.Conds.CondElseIf;
@@ -13,6 +12,7 @@ import ast.bodies.stmts.Skip;
 import ast.coordinator.Operation;
 import ast.coordinator.Operator;
 import ast.exprs.Affect;
+import ast.types.Char;
 import ast.types.Number;
 import ast.types.Var;
 import com.sun.istack.internal.NotNull;
@@ -137,5 +137,28 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
         return new Bool(position(ctx), Boolean.valueOf(ctx.getText()));
     }
 
+    @Override
+    public Ast visitNot(LangageParser.NotContext ctx) {
+        return new Not(position(ctx), (BExpr) visit(ctx.bexp()));
+    }
 
+    @Override
+    public Ast visitBlockCondition(LangageParser.BlockConditionContext ctx) {
+        return new Block(position(ctx), (BExpr) visit(ctx.bexp()));
+    }
+
+    @Override
+    public Ast visitAnd(LangageParser.AndContext ctx) {
+        return new And(position(ctx), (BExpr) visit(ctx.land), (BExpr) visit(ctx.rand));
+    }
+
+    @Override
+    public Ast visitOr(LangageParser.OrContext ctx) {
+        return new Or(position(ctx), (BExpr) visit(ctx.lor), (BExpr) visit(ctx.ror));
+    }
+
+    @Override
+    public Ast visitCharacter(LangageParser.CharacterContext ctx) {
+        return new Char(position(ctx), ctx.getText().charAt(1));
+    }
 }

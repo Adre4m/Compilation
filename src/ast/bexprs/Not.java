@@ -7,12 +7,17 @@ import ast.BExpr;
  */
 public class Not extends BExpr {
 
-    protected Not(Position pos) {
+    private BExpr not;
+
+    public Not(Position pos, BExpr not) {
         super(pos);
+        this.not = not;
     }
 
     @Override
     public String toDot() {
-        return null;
+        StringBuilder sb = new StringBuilder(dotTag() + " [label=\"not\"];\n");
+        sb.append(not.toDot()).append(dotTag()).append(" -> ").append(not.dotTag()).append(";\n");
+        return sb.toString();
     }
 }

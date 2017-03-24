@@ -7,12 +7,20 @@ import ast.BExpr;
  */
 public class And extends BExpr {
 
-    protected And(Position pos) {
+    private BExpr left;
+    private BExpr right;
+
+    public And(Position pos, BExpr left, BExpr right) {
         super(pos);
+        this.left = left;
+        this.right = right;
     }
 
     @Override
     public String toDot() {
-        return null;
+        StringBuilder sb = new StringBuilder(dotTag() + " [label=\"and\"];\n");
+        sb.append(left.toDot()).append(dotTag()).append(" -> ").append(left.dotTag()).append(";\n");
+        sb.append(right.toDot()).append(dotTag()).append(" -> ").append(right.dotTag()).append(";\n");
+        return sb.toString();
     }
 }

@@ -323,9 +323,7 @@ public class LangageParser extends Parser {
 		}
 	}
 	public static class VarContext extends ExprContext {
-		public VariableContext variable() {
-			return getRuleContext(VariableContext.class,0);
-		}
+		public TerminalNode VAR() { return getToken(LangageParser.VAR, 0); }
 		public VarContext(ExprContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
@@ -422,7 +420,7 @@ public class LangageParser extends Parser {
 				_ctx = _localctx;
 				_prevctx = _localctx;
 				setState(34);
-				variable();
+				match(VAR);
 				}
 				break;
 			case CHAR:
@@ -1410,7 +1408,7 @@ public class LangageParser extends Parser {
 		"\3\2\2\2\fE\3\2\2\2\16a\3\2\2\2\20c\3\2\2\2\22f\3\2\2\2\24\u0085\3\2\2"+
 		"\2\26\u008c\3\2\2\2\30\u008f\3\2\2\2\32\33\t\2\2\2\33\3\3\2\2\2\34\35"+
 		"\7!\2\2\35\5\3\2\2\2\36\37\7#\2\2\37\7\3\2\2\2 !\t\3\2\2!\t\3\2\2\2\""+
-		"#\b\6\1\2#/\7 \2\2$/\5\4\3\2%/\5\6\4\2&*\7\16\2\2\')\13\2\2\2(\'\3\2\2"+
+		"#\b\6\1\2#/\7 \2\2$/\7!\2\2%/\5\6\4\2&*\7\16\2\2\')\13\2\2\2(\'\3\2\2"+
 		"\2),\3\2\2\2*(\3\2\2\2*+\3\2\2\2+-\3\2\2\2,*\3\2\2\2-/\7\16\2\2.\"\3\2"+
 		"\2\2.$\3\2\2\2.%\3\2\2\2.&\3\2\2\2/\66\3\2\2\2\60\61\f\3\2\2\61\62\5\b"+
 		"\5\2\62\63\5\n\6\4\63\65\3\2\2\2\64\60\3\2\2\2\658\3\2\2\2\66\64\3\2\2"+
