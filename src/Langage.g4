@@ -48,7 +48,7 @@ comp :
 variable: VAR;
 character:CHAR; // TODO
 
-op : // TODO
+op :
      '+'
    | '*'
    | '-'
@@ -58,29 +58,26 @@ op : // TODO
 expr :
     NUM                         #number
   | variable                    #var
-  | character                   #char // TODO
-  | '"' .* '"'                  #string // TODO
+  | character                   #char       // TODO
+  | '"' .* '"'                  #string     // TODO
   | left = expr op right = expr #operation;
 
 bexp :
     ('true' | 'false')              #boolean
-  | '!' bexp                        #not // TODO
-  | PARO bexp  PARF                 #blockCondition // TODO
-  | land = bexp '&&' rand = bexp    #and // TODO
-  | lor = bexp '||' ror = bexp      #or // TODO
+  | '!' bexp                        #not             // TODO
+  | PARO bexp  PARF                 #blockCondition  // TODO
+  | land = bexp '&&' rand = bexp    #and             // TODO
+  | lor = bexp '||' ror = bexp      #or              // TODO
   | left = expr comp right = expr   #compare;
 
 stmt :
     'skip'               #skip
   | variable '=' expr    #affectExpr
   | variable '=' bexp    #affectBool
-  | stmt ';' stmt        #doubleStmt // TODO
-  | BRAO lang BRAF       #block // TODO
-  | variable '--'        #decrementVar // TODO
+  // | stmt ';' stmt        #doubleStmt   // TODO?
+  // | BRAO lang BRAF       #block        // TODO?
+  | variable '--'        #decrementVar
   | variable '++'        #incrementVar;
-
-elseif :
-    'else' 'if' PARO bexp PARF 'then' lang;
 
 elseCond:
     'else' lang;

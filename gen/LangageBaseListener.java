@@ -186,49 +186,13 @@ public class LangageBaseListener implements LangageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAffectExpr(LangageParser.AffectExprContext ctx) { }
+	@Override public void enterBlockCondition(LangageParser.BlockConditionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAffectExpr(LangageParser.AffectExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterDoubleStmt(LangageParser.DoubleStmtContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitDoubleStmt(LangageParser.DoubleStmtContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterIncrementVar(LangageParser.IncrementVarContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitIncrementVar(LangageParser.IncrementVarContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterAffectBool(LangageParser.AffectBoolContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitAffectBool(LangageParser.AffectBoolContext ctx) { }
+	@Override public void exitBlockCondition(LangageParser.BlockConditionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -246,13 +210,25 @@ public class LangageBaseListener implements LangageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(LangageParser.BlockContext ctx) { }
+	@Override public void enterAffectExpr(LangageParser.AffectExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlock(LangageParser.BlockContext ctx) { }
+	@Override public void exitAffectExpr(LangageParser.AffectExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAffectBool(LangageParser.AffectBoolContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAffectBool(LangageParser.AffectBoolContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -270,13 +246,13 @@ public class LangageBaseListener implements LangageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElseif(LangageParser.ElseifContext ctx) { }
+	@Override public void enterIncrementVar(LangageParser.IncrementVarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElseif(LangageParser.ElseifContext ctx) { }
+	@Override public void exitIncrementVar(LangageParser.IncrementVarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

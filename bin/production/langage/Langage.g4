@@ -48,7 +48,7 @@ comp :
 variable: VAR;
 character:CHAR; // TODO
 
-op : // TODO
+op :
      '+'
    | '*'
    | '-'
@@ -56,36 +56,34 @@ op : // TODO
    | '%';
 
 expr :
-    NUM                     #number
-  | variable                        #var
-  | character                        #char // TODO
-  | '"' .* '"'                  #string // TODO
+    NUM                         #number
+  | variable                    #var
+  | character                   #char       // TODO
+  | '"' .* '"'                  #string     // TODO
   | left = expr op right = expr #operation;
 
 bexp :
     ('true' | 'false')              #boolean
-  | '!'bexp                         #not // TODO
-  | land = bexp '&&' rand = bexp    #and // TODO
-  | lor = bexp '||' ror = bexp      #or // TODO
+  | '!' bexp                        #not             // TODO
+  | PARO bexp  PARF                 #blockCondition  // TODO
+  | land = bexp '&&' rand = bexp    #and             // TODO
+  | lor = bexp '||' ror = bexp      #or              // TODO
   | left = expr comp right = expr   #compare;
 
 stmt :
-    'skip'          #skip
+    'skip'               #skip
   | variable '=' expr    #affectExpr
   | variable '=' bexp    #affectBool
-  | stmt ';' stmt   #doubleStmt // TODO
-  | BRAO lang BRAF  #block // TODO
-  | variable '--'     #decrementVar // TODO
-  | variable '++'     #incrementVar;
-
-elseif :
-    'else' 'if' PARO bexp PARF 'then' lang;
+  // | stmt ';' stmt        #doubleStmt   // TODO?
+  // | BRAO lang BRAF       #block        // TODO?
+  | variable '--'        #decrementVar
+  | variable '++'        #incrementVar;
 
 elseCond:
     'else' lang;
 
 cond :
-    'if' PARO ifE= bexp PARF 'then' ifB=lang elseif* elseCond? 'end';
+    'if' PARO ifE= bexp PARF 'then' ifB=lang elseCond? 'end';
 
 loop :
     'for' PARO init=stmt ';' bexp ';' incr=stmt PARF 'do' lang 'end' #for

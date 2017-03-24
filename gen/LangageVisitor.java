@@ -107,33 +107,12 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAnd(LangageParser.AndContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code affectExpr}
-	 * labeled alternative in {@link LangageParser#stmt}.
+	 * Visit a parse tree produced by the {@code blockCondition}
+	 * labeled alternative in {@link LangageParser#bexp}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAffectExpr(LangageParser.AffectExprContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code doubleStmt}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitDoubleStmt(LangageParser.DoubleStmtContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code incrementVar}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIncrementVar(LangageParser.IncrementVarContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code affectBool}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAffectBool(LangageParser.AffectBoolContext ctx);
+	T visitBlockCondition(LangageParser.BlockConditionContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code skip}
 	 * labeled alternative in {@link LangageParser#stmt}.
@@ -142,12 +121,19 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitSkip(LangageParser.SkipContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code block}
+	 * Visit a parse tree produced by the {@code affectExpr}
 	 * labeled alternative in {@link LangageParser#stmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBlock(LangageParser.BlockContext ctx);
+	T visitAffectExpr(LangageParser.AffectExprContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code affectBool}
+	 * labeled alternative in {@link LangageParser#stmt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAffectBool(LangageParser.AffectBoolContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code decrementVar}
 	 * labeled alternative in {@link LangageParser#stmt}.
@@ -156,11 +142,12 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDecrementVar(LangageParser.DecrementVarContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link LangageParser#elseif}.
+	 * Visit a parse tree produced by the {@code incrementVar}
+	 * labeled alternative in {@link LangageParser#stmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitElseif(LangageParser.ElseifContext ctx);
+	T visitIncrementVar(LangageParser.IncrementVarContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link LangageParser#elseCond}.
 	 * @param ctx the parse tree

@@ -7,8 +7,11 @@ import ast.bodies.Conds.CondElseIf;
 import ast.bodies.Stmt;
 import ast.bodies.loops.For;
 import ast.bodies.loops.While;
+import ast.bodies.stmts.Decrement;
 import ast.bodies.stmts.Increment;
 import ast.bodies.stmts.Skip;
+import ast.coordinator.Operation;
+import ast.coordinator.Operator;
 import ast.exprs.Affect;
 import ast.types.Number;
 import ast.types.Var;
@@ -32,7 +35,7 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
 
     @Override
     public Ast visitOp(@NotNull LangageParser.OpContext ctx) {
-        return super.visitOp(ctx);
+        return new Operator(position(ctx), ctx.getText());
     }
 
     @Override
@@ -54,26 +57,16 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
         return new Skip(position(ctx));
     }
 
-    @Override
-    public Ast visitElseif(LangageParser.ElseifContext ctx) {
-        BExpr expr = (BExpr) visit(ctx.bexp());
-        Lang body = (Lang) visit(ctx.lang());
-        return new CondElseIf(position(ctx), expr, body);
-    }
 
     @Override
     public Ast visitCond(LangageParser.CondContext ctx) {
         BExpr ifE = (BExpr) visit(ctx.ifE);
         Lang ifB = (Lang) visit(ctx.ifB);
-        ArrayList<CondElseIf> elseIfs = new ArrayList<>();
-        if(!ctx.elseif().isEmpty()) {
-            elseIfs.addAll(ctx.elseif().stream().map(elseIf -> (CondElseIf) visit(elseIf)).collect(Collectors.toList()));
-        }
         CondElse elseB = null;
-        if(ctx.elseCond() != null) {
+        if (ctx.elseCond() != null) {
             elseB = (CondElse) visit(ctx.elseCond());
         }
-        return new Cond(position(ctx), ifE, ifB, elseIfs, elseB);
+        return new Cond(position(ctx), ifE, ifB, elseB);
     }
 
     @Override
@@ -106,12 +99,12 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
 
     @Override
     public Ast visitWhile(LangageParser.WhileContext ctx) {
-        return new While(position(ctx), (BExpr) visit(ctx.bexp()),  (Lang) visit(ctx.lang()));
+        return new While(position(ctx), (BExpr) visit(ctx.bexp()), (Lang) visit(ctx.lang()));
     }
 
     @Override
     public Ast visitOperation(LangageParser.OperationContext ctx) {
-        return super.visitOperation(ctx);
+        return new Operation(position(ctx), (Expr) visit(ctx.left), (Expr) visit(ctx.right), (Operator) visit(ctx.op()));
     }
 
     @Override
@@ -122,6 +115,11 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
     @Override
     public Ast visitIncrementVar(LangageParser.IncrementVarContext ctx) {
         return new Increment(position(ctx), (Var) visit(ctx.variable()));
+    }
+
+    @Override
+    public Ast visitDecrementVar(LangageParser.DecrementVarContext ctx) {
+        return new Decrement(position(ctx), (Var) visit(ctx.variable()));
     }
 
     @Override
@@ -138,4 +136,6 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
     public Ast visitBoolean(LangageParser.BooleanContext ctx) {
         return new Bool(position(ctx), Boolean.valueOf(ctx.getText()));
     }
+
+
 }

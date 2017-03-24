@@ -170,53 +170,17 @@ public interface LangageListener extends ParseTreeListener {
 	 */
 	void exitAnd(LangageParser.AndContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code affectExpr}
-	 * labeled alternative in {@link LangageParser#stmt}.
+	 * Enter a parse tree produced by the {@code blockCondition}
+	 * labeled alternative in {@link LangageParser#bexp}.
 	 * @param ctx the parse tree
 	 */
-	void enterAffectExpr(LangageParser.AffectExprContext ctx);
+	void enterBlockCondition(LangageParser.BlockConditionContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code affectExpr}
-	 * labeled alternative in {@link LangageParser#stmt}.
+	 * Exit a parse tree produced by the {@code blockCondition}
+	 * labeled alternative in {@link LangageParser#bexp}.
 	 * @param ctx the parse tree
 	 */
-	void exitAffectExpr(LangageParser.AffectExprContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code doubleStmt}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterDoubleStmt(LangageParser.DoubleStmtContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code doubleStmt}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitDoubleStmt(LangageParser.DoubleStmtContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code incrementVar}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterIncrementVar(LangageParser.IncrementVarContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code incrementVar}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitIncrementVar(LangageParser.IncrementVarContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code affectBool}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterAffectBool(LangageParser.AffectBoolContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code affectBool}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitAffectBool(LangageParser.AffectBoolContext ctx);
+	void exitBlockCondition(LangageParser.BlockConditionContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code skip}
 	 * labeled alternative in {@link LangageParser#stmt}.
@@ -230,17 +194,29 @@ public interface LangageListener extends ParseTreeListener {
 	 */
 	void exitSkip(LangageParser.SkipContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code block}
+	 * Enter a parse tree produced by the {@code affectExpr}
 	 * labeled alternative in {@link LangageParser#stmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterBlock(LangageParser.BlockContext ctx);
+	void enterAffectExpr(LangageParser.AffectExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code block}
+	 * Exit a parse tree produced by the {@code affectExpr}
 	 * labeled alternative in {@link LangageParser#stmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitBlock(LangageParser.BlockContext ctx);
+	void exitAffectExpr(LangageParser.AffectExprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code affectBool}
+	 * labeled alternative in {@link LangageParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterAffectBool(LangageParser.AffectBoolContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code affectBool}
+	 * labeled alternative in {@link LangageParser#stmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitAffectBool(LangageParser.AffectBoolContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code decrementVar}
 	 * labeled alternative in {@link LangageParser#stmt}.
@@ -254,15 +230,17 @@ public interface LangageListener extends ParseTreeListener {
 	 */
 	void exitDecrementVar(LangageParser.DecrementVarContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LangageParser#elseif}.
+	 * Enter a parse tree produced by the {@code incrementVar}
+	 * labeled alternative in {@link LangageParser#stmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterElseif(LangageParser.ElseifContext ctx);
+	void enterIncrementVar(LangageParser.IncrementVarContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LangageParser#elseif}.
+	 * Exit a parse tree produced by the {@code incrementVar}
+	 * labeled alternative in {@link LangageParser#stmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitElseif(LangageParser.ElseifContext ctx);
+	void exitIncrementVar(LangageParser.IncrementVarContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LangageParser#elseCond}.
 	 * @param ctx the parse tree

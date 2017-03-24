@@ -13,14 +13,12 @@ public class Cond extends Body {
 
     private BExpr expr;
     private Lang thenBlock;
-    private ArrayList<CondElseIf> elseIfs;
     private CondElse elseBlock;
 
-    public Cond(Position pos, BExpr expr, Lang thenBlock, ArrayList<CondElseIf> elseIfs, CondElse elseBlock) {
+    public Cond(Position pos, BExpr expr, Lang thenBlock, CondElse elseBlock) {
         super(pos);
         this.expr = expr;
         this.thenBlock = thenBlock;
-        this.elseIfs = elseIfs;
         this.elseBlock = elseBlock;
     }
 
@@ -29,9 +27,6 @@ public class Cond extends Body {
         StringBuilder sb = new StringBuilder(dotTag() + " [label=\"if\"];\n");
         sb.append(expr.toDot()).append(dotTag()).append(" -> ").append(expr.dotTag()).append(";\n");
         sb.append(thenBlock.toDot()).append(dotTag()).append(" -> ").append(thenBlock.dotTag()).append(";\n");
-        for (CondElseIf elseIf : elseIfs) {
-            sb.append(elseIf.toDot()).append(dotTag()).append(" -> ").append(elseIf.dotTag()).append(";\n");
-        }
         if (elseBlock != null) {
             sb.append(elseBlock.toDot()).append(dotTag()).append(" -> ").append(elseBlock.dotTag()).append(";\n");
         }
