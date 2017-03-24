@@ -1,0 +1,14 @@
+if(x == 2) then
+    skip
+else if(x <= 3) then
+    skip
+else if(x > 3) then
+    while(x < 10) do
+        x ++
+    end
+else if(x >= 3) then
+    skip
+else if(x != 9) then
+    skip
+end
+skip

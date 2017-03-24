@@ -1,0 +1,27 @@
+if(x == 2) then
+    if(z == 5) then
+        skip
+    end
+    if(true) then
+        skip
+    end
+    if(false) then
+        skip
+    end
+else
+    if(x <= 3) then
+    for(y = 5.2; y < 8.2; y++) do
+        skip
+    end
+    else if(x > 3) then
+    while(x < 10) do
+        x ++
+    end
+    end
+else if(x >= 3) then
+    skip
+    end
+else
+    skip
+end
+skip
