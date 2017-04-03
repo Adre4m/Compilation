@@ -23,8 +23,8 @@ options
 
 // ***************** lexer rules:
 
-//INT : ('0' .. '9')+;
-//FLOAT : INT '.' INT;
+INT : ('0' .. '9')+;
+FLOAT : INT '.' INT;
 NUM : ('0' .. '9')+('.')?('0'..'9')*;
 VAR : ('a' .. 'z')+('a'..'z'|'A'..'Z'|'0'..'9')*; //VAR : [a-z][a-zA-Z0-9]*?;
 WS : [ \t\n] -> skip;
@@ -45,8 +45,10 @@ comp :
    | '=='
    | '!=';
 
+integer : INT;
 variable: VAR;
-character:CHAR; // TODO
+
+types : 'int'|'float'|'char';
 
 op :
      '+'
@@ -56,16 +58,17 @@ op :
    | '%';
 
 expr :
-    NUM                         #number
-  | variable                    #var
-  | character                   #char       // TODO
+    INT                         #int        //fixme
+  | FLOAT                       #float      //fixme
+  | VAR                         #var        //fixme
+  | CHAR                        #char       // fixme
   | '"' .* '"'                  #string     // TODO
   | left = expr op right = expr #operation;
 
 bexp :
-    ('true' | 'false')              #boolean
-  | '!' bexp                        #not             // TODO
-  | PARO bexp  PARF                 #blockCondition  // TODO
+    ('true' | 'false')              #boolean         // fixme
+  | '!' bexp                        #not
+  | PARO bexp  PARF                 #blockCondition  // todo
   | land = bexp '&&' rand = bexp    #and             // TODO
   | lor = bexp '||' ror = bexp      #or              // TODO
   | left = expr comp right = expr   #compare;
@@ -92,5 +95,8 @@ loop :
 lang :
     (stmt|cond|loop)*?;
 
+declarations :
+   (types variable)*?;
+
 prog :
-    lang <EOF>;
+    declarations lang <EOF>;

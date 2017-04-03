@@ -5,11 +5,11 @@ import ast.Type;
 /**
  * Created by o2132140 on 22/03/17.
  */
-public class Number extends Type {
+public class Floatt extends Type {
 
-    private float value;
+    private String value;
 
-    public Number(Position pos, float value) {
+    public Floatt(final Position pos,final String value) {
         super(pos);
         this.value = value;
     }

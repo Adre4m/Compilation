@@ -1,4 +1,4 @@
-// Generated from /home/etud/o2132140/Documents/Compilation/TD2/langage/src/Langage.g4 by ANTLR 4.6
+// Generated from C:/Users/willi/Documents/Papier Master 1/Semestre 2/Compilation/Projet Compilation/gitProject/src\Langage.g4 by ANTLR 4.6
 
 //package org.meri.antlr_step_by_step.parsers;
 
@@ -19,30 +19,29 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitComp(LangageParser.CompContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link LangageParser#integer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInteger(LangageParser.IntegerContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link LangageParser#variable}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitVariable(LangageParser.VariableContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link LangageParser#character}.
+	 * Visit a parse tree produced by {@link LangageParser#types}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCharacter(LangageParser.CharacterContext ctx);
+	T visitTypes(LangageParser.TypesContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link LangageParser#op}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitOp(LangageParser.OpContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code number}
-	 * labeled alternative in {@link LangageParser#expr}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitNumber(LangageParser.NumberContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code string}
 	 * labeled alternative in {@link LangageParser#expr}.
@@ -65,12 +64,26 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitChar(LangageParser.CharContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code float}
+	 * labeled alternative in {@link LangageParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFloat(LangageParser.FloatContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code operation}
 	 * labeled alternative in {@link LangageParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitOperation(LangageParser.OperationContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code int}
+	 * labeled alternative in {@link LangageParser#expr}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInt(LangageParser.IntContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code not}
 	 * labeled alternative in {@link LangageParser#bexp}.
@@ -180,6 +193,12 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitLang(LangageParser.LangContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link LangageParser#declarations}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeclarations(LangageParser.DeclarationsContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link LangageParser#prog}.
 	 * @param ctx the parse tree

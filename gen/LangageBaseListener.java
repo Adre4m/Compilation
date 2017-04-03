@@ -1,4 +1,4 @@
-// Generated from /home/etud/o2132140/Documents/Compilation/TD2/langage/src/Langage.g4 by ANTLR 4.6
+// Generated from C:/Users/willi/Documents/Papier Master 1/Semestre 2/Compilation/Projet Compilation/gitProject/src\Langage.g4 by ANTLR 4.6
 
 //package org.meri.antlr_step_by_step.parsers;
 
@@ -30,6 +30,18 @@ public class LangageBaseListener implements LangageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterInteger(LangageParser.IntegerContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInteger(LangageParser.IntegerContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterVariable(LangageParser.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -42,13 +54,13 @@ public class LangageBaseListener implements LangageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCharacter(LangageParser.CharacterContext ctx) { }
+	@Override public void enterTypes(LangageParser.TypesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCharacter(LangageParser.CharacterContext ctx) { }
+	@Override public void exitTypes(LangageParser.TypesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -61,18 +73,6 @@ public class LangageBaseListener implements LangageListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitOp(LangageParser.OpContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterNumber(LangageParser.NumberContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNumber(LangageParser.NumberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -114,6 +114,18 @@ public class LangageBaseListener implements LangageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterFloat(LangageParser.FloatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFloat(LangageParser.FloatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterOperation(LangageParser.OperationContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -121,6 +133,18 @@ public class LangageBaseListener implements LangageListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitOperation(LangageParser.OperationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterInt(LangageParser.IntContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInt(LangageParser.IntContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -313,6 +337,18 @@ public class LangageBaseListener implements LangageListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLang(LangageParser.LangContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDeclarations(LangageParser.DeclarationsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDeclarations(LangageParser.DeclarationsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

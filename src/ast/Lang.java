@@ -16,7 +16,7 @@ public class Lang extends Ast {
 
     @Override
     public String toDot() {
-        StringBuilder sb = new StringBuilder(dotTag() + " [label=\"body\"];\n");
+        final StringBuilder sb = new StringBuilder(dotTag() + " [label=\"body\"];\n");
         for (Body body : bodies)
             sb.append(body.toDot()).append(dotTag()).append(" -> ").append(body.dotTag()).append(";\n");
         return sb.toString();

@@ -1,4 +1,4 @@
-// Generated from /home/etud/o2132140/Documents/Compilation/TD2/langage/src/Langage.g4 by ANTLR 4.6
+// Generated from C:/Users/willi/Documents/Papier Master 1/Semestre 2/Compilation/Projet Compilation/gitProject/src\Langage.g4 by ANTLR 4.6
 
 //package org.meri.antlr_step_by_step.parsers;
 
@@ -20,6 +20,16 @@ public interface LangageListener extends ParseTreeListener {
 	 */
 	void exitComp(LangageParser.CompContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link LangageParser#integer}.
+	 * @param ctx the parse tree
+	 */
+	void enterInteger(LangageParser.IntegerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LangageParser#integer}.
+	 * @param ctx the parse tree
+	 */
+	void exitInteger(LangageParser.IntegerContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link LangageParser#variable}.
 	 * @param ctx the parse tree
 	 */
@@ -30,15 +40,15 @@ public interface LangageListener extends ParseTreeListener {
 	 */
 	void exitVariable(LangageParser.VariableContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LangageParser#character}.
+	 * Enter a parse tree produced by {@link LangageParser#types}.
 	 * @param ctx the parse tree
 	 */
-	void enterCharacter(LangageParser.CharacterContext ctx);
+	void enterTypes(LangageParser.TypesContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LangageParser#character}.
+	 * Exit a parse tree produced by {@link LangageParser#types}.
 	 * @param ctx the parse tree
 	 */
-	void exitCharacter(LangageParser.CharacterContext ctx);
+	void exitTypes(LangageParser.TypesContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LangageParser#op}.
 	 * @param ctx the parse tree
@@ -49,18 +59,6 @@ public interface LangageListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitOp(LangageParser.OpContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code number}
-	 * labeled alternative in {@link LangageParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterNumber(LangageParser.NumberContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code number}
-	 * labeled alternative in {@link LangageParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitNumber(LangageParser.NumberContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code string}
 	 * labeled alternative in {@link LangageParser#expr}.
@@ -98,6 +96,18 @@ public interface LangageListener extends ParseTreeListener {
 	 */
 	void exitChar(LangageParser.CharContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code float}
+	 * labeled alternative in {@link LangageParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterFloat(LangageParser.FloatContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code float}
+	 * labeled alternative in {@link LangageParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitFloat(LangageParser.FloatContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code operation}
 	 * labeled alternative in {@link LangageParser#expr}.
 	 * @param ctx the parse tree
@@ -109,6 +119,18 @@ public interface LangageListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitOperation(LangageParser.OperationContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code int}
+	 * labeled alternative in {@link LangageParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterInt(LangageParser.IntContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code int}
+	 * labeled alternative in {@link LangageParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitInt(LangageParser.IntContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code not}
 	 * labeled alternative in {@link LangageParser#bexp}.
@@ -295,6 +317,16 @@ public interface LangageListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLang(LangageParser.LangContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LangageParser#declarations}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclarations(LangageParser.DeclarationsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LangageParser#declarations}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclarations(LangageParser.DeclarationsContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LangageParser#prog}.
 	 * @param ctx the parse tree

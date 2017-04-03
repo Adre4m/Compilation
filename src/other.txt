@@ -12,3 +12,6 @@ else if(x != 9) then
     skip
 end
 skip
+
+########################NE PAS SUPPRIMER######################
+type id(...) begin stmt end

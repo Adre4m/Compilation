@@ -1,9 +1,11 @@
-import ast.Ast;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 /**
@@ -12,6 +14,8 @@ import java.util.Scanner;
 
 
 public class LangageCompiler {
+
+    private static final Logger LOG = Logger.getGlobal();
 
     public static void main(String args[]) {
         try {
@@ -26,8 +30,12 @@ public class LangageCompiler {
             LangageParser parser = new LangageParser(tokens);
             PrintStream ost = new PrintStream(new File("test.dot"));
             ost.println(new AstBuilder().visit(parser.prog()).toDot());
+            LOG.info("FINISH : La compilation de votre programme c'est déroulé avec succès !");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        }
+        catch(RuntimeException e2){
+            // Runtime : C'est pour chopper tout les problèmes tels que les NullPoiner ou les divisions par 0 ...
         }
     }
 

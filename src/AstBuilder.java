@@ -1,9 +1,9 @@
 import ast.*;
-import ast.bexprs.Compare;
+import ast.Ast.Position;
 import ast.bexprs.Bool;
+import ast.bexprs.Compare;
 import ast.bodies.Cond;
 import ast.bodies.Conds.CondElse;
-import ast.bodies.Conds.CondElseIf;
 import ast.bodies.Stmt;
 import ast.bodies.loops.For;
 import ast.bodies.loops.While;
@@ -13,20 +13,23 @@ import ast.bodies.stmts.Skip;
 import ast.coordinator.Operation;
 import ast.coordinator.Operator;
 import ast.exprs.Affect;
-import ast.types.Number;
+import ast.types.Floatt;
+import ast.types.Intt;
 import ast.types.Var;
 import com.sun.istack.internal.NotNull;
 import org.antlr.v4.runtime.ParserRuleContext;
-import ast.Ast.Position;
 import org.jetbrains.annotations.Contract;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
  * Created by o2132140 on 17/02/17.
  */
 public class AstBuilder extends LangageBaseVisitor<Ast> {
+
+    private static final Logger LOG = Logger.getGlobal();
 
     @Contract("_ -> !null")
     public static Position position(@NotNull ParserRuleContext ctx) {
@@ -49,7 +52,7 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
 
     @Override
     public Ast visitProg(@NotNull LangageParser.ProgContext ctx) {
-        return new Prog(position(ctx), (Lang) visit(ctx.lang()));
+        return new Prog(position(ctx),(Lang) visit(ctx.lang()),(Declarations)visit(ctx.declarations()));
     }
 
     @Override
@@ -83,12 +86,19 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
     }
 
     @Override
-    public Ast visitNumber(LangageParser.NumberContext ctx) {
-        return new Number(position(ctx), Float.parseFloat(ctx.getText()));
+    public Ast visitFloat(LangageParser.FloatContext ctx) {
+        return new Floatt(position(ctx),ctx.getText());
+    }
+
+    @Override
+    public Ast visitInt(LangageParser.IntContext ctx){
+        return new Intt(position(ctx),ctx.getText());
     }
 
     @Override
     public Ast visitVariable(LangageParser.VariableContext ctx) {
+
+
         return new Var(position(ctx), ctx.getText());
     }
 
@@ -103,8 +113,24 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
     }
 
     @Override
+    public Ast visitVar(LangageParser.VarContext ctx){
+        return new Var(position(ctx),ctx.getText());
+    }
+
+    @Override
     public Ast visitOperation(LangageParser.OperationContext ctx) {
-        return new Operation(position(ctx), (Expr) visit(ctx.left), (Expr) visit(ctx.right), (Operator) visit(ctx.op()));
+        Expr gauche = (Expr) visit(ctx.left);
+        Expr droite = (Expr) visit(ctx.right);
+        final Object typeG = gauche.getClass();
+        final Object typeD = droite.getClass();
+        if(! (typeG.equals(Var.class) || typeD.equals(Var.class))){
+            if(!gauche.getClass().equals(droite.getClass())){
+                LOG.severe("Erreur : Les expressions situées à gauche et à droite de l'opérateur sont de types" +
+                        " différents.");
+                return null;
+            }
+        }
+        return new Operation(position(ctx), gauche, droite, (Operator) visit(ctx.op()));
     }
 
     @Override
@@ -136,6 +162,19 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
     public Ast visitBoolean(LangageParser.BooleanContext ctx) {
         return new Bool(position(ctx), Boolean.valueOf(ctx.getText()));
     }
-
+    @Override
+    //todo l'affichage de l'arbre n'est pas correcte
+    public Ast visitDeclarations(LangageParser.DeclarationsContext ctx){
+        ArrayList<Ast> namesArr = new ArrayList<>();
+        ArrayList<Body> typesArr = new ArrayList<>();
+        typesArr.addAll(ctx.types().stream().map(types -> (Body) visit(types)).collect(Collectors.toList()));
+        LOG.info("pass");
+        namesArr.addAll(ctx.variable().stream().map(var -> (Ast) visit(var)).collect(Collectors.toList()));
+        return new Declarations(position(ctx),namesArr,typesArr);
+    }
+    @Override
+    public Ast visitTypes(LangageParser.TypesContext ctx){
+        return new Types(position(ctx),ctx.getText());
+    }
 
 }
