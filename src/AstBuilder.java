@@ -52,7 +52,8 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
 
     @Override
     public Ast visitProg(@NotNull LangageParser.ProgContext ctx) {
-        return new Prog(position(ctx),(Lang) visit(ctx.lang()),(Declarations)visit(ctx.declarations()));
+        ArrayList<Declarations> declarations = ctx.declarations().stream().map(decl -> (Declarations) visit(decl)).collect(Collectors.toCollection(ArrayList::new));
+        return new Prog(position(ctx),(Lang) visit(ctx.lang()),declarations);
     }
 
     @Override
@@ -140,23 +141,23 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
 
     @Override
     public Ast visitIncrementVar(LangageParser.IncrementVarContext ctx) {
-        return new Increment(position(ctx), (Var) visit(ctx.variable()));
+        return new Increment(position(ctx), new Var(position(ctx),ctx.VAR().getText()));
     }
 
     @Override
     public Ast visitDecrementVar(LangageParser.DecrementVarContext ctx) {
-        return new Decrement(position(ctx), (Var) visit(ctx.variable()));
+        return new Decrement(position(ctx), new Var(position(ctx),ctx.VAR().getText()));
     }
 
     @Override
     public Ast visitAffectExpr(LangageParser.AffectExprContext ctx) {
-        return new Affect(position(ctx), visit(ctx.expr()), (Var) visit(ctx.variable()));
+        return new Affect(position(ctx), visit(ctx.expr()), new Var(position(ctx),ctx.VAR().getText()));
     }
 
-    @Override
-    public Ast visitAffectBool(LangageParser.AffectBoolContext ctx) {
-        return new Affect(position(ctx), visit(ctx.bexp()), (Var) visit(ctx.variable()));
-    }
+//    @Override
+//    public Ast visitAffectBool(LangageParser.AffectBoolContext ctx) {
+//        return new Affect(position(ctx), visit(ctx.bexp()), new Var(position(ctx),ctx.VAR().getText()));
+//    }
 
     @Override
     public Ast visitBoolean(LangageParser.BooleanContext ctx) {
@@ -165,12 +166,7 @@ public class AstBuilder extends LangageBaseVisitor<Ast> {
     @Override
     //todo l'affichage de l'arbre n'est pas correcte
     public Ast visitDeclarations(LangageParser.DeclarationsContext ctx){
-        ArrayList<Ast> namesArr = new ArrayList<>();
-        ArrayList<Body> typesArr = new ArrayList<>();
-        typesArr.addAll(ctx.types().stream().map(types -> (Body) visit(types)).collect(Collectors.toList()));
-        LOG.info("pass");
-        namesArr.addAll(ctx.variable().stream().map(var -> (Ast) visit(var)).collect(Collectors.toList()));
-        return new Declarations(position(ctx),namesArr,typesArr);
+        return new Declarations(position(ctx),new Var(position(ctx),ctx.VAR().getText()),(Types)visit(ctx.types()));
     }
     @Override
     public Ast visitTypes(LangageParser.TypesContext ctx){

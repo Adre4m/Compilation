@@ -33,8 +33,12 @@ PARO : '(';
 PARF : ')';
 BRAO : '{';
 BRAF : '}';
+CROO : '[';
+CROF : ']';
+VIR : ',';
 BOOL : ('true' | 'false');
-
+EGAL : '=';
+NEW : 'new';
 // ***************** parser rules:
 
 comp :
@@ -45,11 +49,13 @@ comp :
    | '=='
    | '!=';
 
-integer : INT;
-variable: VAR;
+//integer : INT;
+//variable: VAR;
 
-types : 'int'|'float'|'char';
+types : 'int' |'float'|'char'|tab; //char or string
+//todo tableau
 
+tab : 'array' PARO types PARF; //todo
 op :
      '+'
    | '*'
@@ -58,11 +64,11 @@ op :
    | '%';
 
 expr :
-    INT                         #int        //fixme
-  | FLOAT                       #float      //fixme
-  | VAR                         #var        //fixme
-  | CHAR                        #char       // fixme
-  | '"' .* '"'                  #string     // TODO
+    INT                         #int
+  | FLOAT                       #float
+  | VAR                         #var
+  | CHAR                        #char       // TODO? //only 3 types
+  | '"' .* '"'                  #string     // TODO? //only 3 types
   | left = expr op right = expr #operation;
 
 bexp :
@@ -75,12 +81,12 @@ bexp :
 
 stmt :
     'skip'               #skip
-  | variable '=' expr    #affectExpr
-  | variable '=' bexp    #affectBool
+  | VAR EGAL expr    #affectExpr
+  //| VAR '=' bexp    #affectBool
   // | stmt ';' stmt        #doubleStmt   // TODO?
   // | BRAO lang BRAF       #block        // TODO?
-  | variable '--'        #decrementVar
-  | variable '++'        #incrementVar;
+  | VAR '--'        #decrementVar
+  | VAR '++'        #incrementVar;
 
 elseCond:
     'else' lang;
@@ -95,8 +101,16 @@ loop :
 lang :
     (stmt|cond|loop)*?;
 
+bodymeth :
+    VAR PARO ((declarations VIR)* declarations)? PARF;
+
+method :
+    'procedure' bodymeth 'is' lang #procedure
+    | 'function' bodymeth types 'is' lang 'return' (stmt | expr) #functions;
+
+
 declarations :
-   (types variable)*?;
+   types VAR;
 
 prog :
-    declarations lang <EOF>;
+   BRAO declarations*? lang BRAF <EOF>;

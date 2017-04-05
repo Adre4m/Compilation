@@ -19,23 +19,23 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitComp(LangageParser.CompContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link LangageParser#integer}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitInteger(LangageParser.IntegerContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link LangageParser#variable}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVariable(LangageParser.VariableContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link LangageParser#types}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitTypes(LangageParser.TypesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link LangageParser#tableau}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTableau(LangageParser.TableauContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link LangageParser#tab}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTab(LangageParser.TabContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link LangageParser#op}.
 	 * @param ctx the parse tree
@@ -140,13 +140,6 @@ public interface LangageVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitAffectExpr(LangageParser.AffectExprContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code affectBool}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAffectBool(LangageParser.AffectBoolContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code decrementVar}
 	 * labeled alternative in {@link LangageParser#stmt}.

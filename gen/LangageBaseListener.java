@@ -30,30 +30,6 @@ public class LangageBaseListener implements LangageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInteger(LangageParser.IntegerContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitInteger(LangageParser.IntegerContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterVariable(LangageParser.VariableContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitVariable(LangageParser.VariableContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterTypes(LangageParser.TypesContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -61,6 +37,30 @@ public class LangageBaseListener implements LangageListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTypes(LangageParser.TypesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTableau(LangageParser.TableauContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTableau(LangageParser.TableauContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTab(LangageParser.TabContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTab(LangageParser.TabContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -241,18 +241,6 @@ public class LangageBaseListener implements LangageListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAffectExpr(LangageParser.AffectExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterAffectBool(LangageParser.AffectBoolContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitAffectBool(LangageParser.AffectBoolContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

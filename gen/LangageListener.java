@@ -20,26 +20,6 @@ public interface LangageListener extends ParseTreeListener {
 	 */
 	void exitComp(LangageParser.CompContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LangageParser#integer}.
-	 * @param ctx the parse tree
-	 */
-	void enterInteger(LangageParser.IntegerContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LangageParser#integer}.
-	 * @param ctx the parse tree
-	 */
-	void exitInteger(LangageParser.IntegerContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link LangageParser#variable}.
-	 * @param ctx the parse tree
-	 */
-	void enterVariable(LangageParser.VariableContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LangageParser#variable}.
-	 * @param ctx the parse tree
-	 */
-	void exitVariable(LangageParser.VariableContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link LangageParser#types}.
 	 * @param ctx the parse tree
 	 */
@@ -49,6 +29,26 @@ public interface LangageListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTypes(LangageParser.TypesContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LangageParser#tableau}.
+	 * @param ctx the parse tree
+	 */
+	void enterTableau(LangageParser.TableauContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LangageParser#tableau}.
+	 * @param ctx the parse tree
+	 */
+	void exitTableau(LangageParser.TableauContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LangageParser#tab}.
+	 * @param ctx the parse tree
+	 */
+	void enterTab(LangageParser.TabContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LangageParser#tab}.
+	 * @param ctx the parse tree
+	 */
+	void exitTab(LangageParser.TabContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LangageParser#op}.
 	 * @param ctx the parse tree
@@ -227,18 +227,6 @@ public interface LangageListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAffectExpr(LangageParser.AffectExprContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code affectBool}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterAffectBool(LangageParser.AffectBoolContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code affectBool}
-	 * labeled alternative in {@link LangageParser#stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitAffectBool(LangageParser.AffectBoolContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code decrementVar}
 	 * labeled alternative in {@link LangageParser#stmt}.

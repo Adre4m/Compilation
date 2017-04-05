@@ -37,6 +37,9 @@ public class LangageCompiler {
         catch(RuntimeException e2){
             // Runtime : C'est pour chopper tout les problèmes tels que les NullPoiner ou les divisions par 0 ...
         }
+        catch(Exception e4){
+
+        }
     }
 
 }

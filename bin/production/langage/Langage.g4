@@ -45,7 +45,7 @@ comp :
    | '=='
    | '!=';
 
-integer : INT;
+//integer : INT;
 variable: VAR;
 
 types : 'int'|'float'|'char';
@@ -58,10 +58,10 @@ op :
    | '%';
 
 expr :
-    INT                         #int        //fixme
-  | FLOAT                       #float      //fixme
-  | VAR                         #var        //fixme
-  | CHAR                        #char       // fixme
+    INT                         #int
+  | FLOAT                       #float
+  | VAR                         #var
+  | CHAR                        #char       // TODO
   | '"' .* '"'                  #string     // TODO
   | left = expr op right = expr #operation;
 
@@ -75,12 +75,12 @@ bexp :
 
 stmt :
     'skip'               #skip
-  | variable '=' expr    #affectExpr
-  | variable '=' bexp    #affectBool
+  | VAR '=' expr    #affectExpr
+  //| VAR '=' bexp    #affectBool
   // | stmt ';' stmt        #doubleStmt   // TODO?
   // | BRAO lang BRAF       #block        // TODO?
-  | variable '--'        #decrementVar
-  | variable '++'        #incrementVar;
+  | VAR '--'        #decrementVar
+  | VAR '++'        #incrementVar;
 
 elseCond:
     'else' lang;
@@ -96,7 +96,7 @@ lang :
     (stmt|cond|loop)*?;
 
 declarations :
-   (types variable)*?;
+   types VAR;
 
 prog :
-    declarations lang <EOF>;
+   BRAO declarations*? lang BRAF <EOF>;
